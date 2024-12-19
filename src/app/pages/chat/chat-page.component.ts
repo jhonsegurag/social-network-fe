@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './chat-page.component.css'
 })
 export class ChatPageComponent {
+  constructor() {}
 
+  ngOnInit() {
+    console.log('[OK] Component: chat-page');
+  }
 }

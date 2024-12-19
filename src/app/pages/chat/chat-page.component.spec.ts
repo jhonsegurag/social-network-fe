@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PeoplePageComponent } from './people-page.component';
+import { ChatPageComponent } from './chat-page.component';
 
-describe('PeoplePageComponent', () => {
-  let component: PeoplePageComponent;
-  let fixture: ComponentFixture<PeoplePageComponent>;
+describe('ChatPageComponent', () => {
+  let component: ChatPageComponent;
+  let fixture: ComponentFixture<ChatPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PeoplePageComponent]
+      imports: [ChatPageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PeoplePageComponent);
+    fixture = TestBed.createComponent(ChatPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
