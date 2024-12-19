@@ -1,0 +1,11 @@
+.btn {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #593EFF;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #432FC3;
+}

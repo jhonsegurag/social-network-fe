@@ -1,0 +1,58 @@
+<div class="container-fluid posts-publish-container p-5">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <div class="post-publish">
+            <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm, $event)">
+                <div class="post-publish-header">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="avatar-profile pull-left">
+                                        <a >
+                                            <img src="{{url + 'get-image-user/' + identity.image}}" *ngIf="identity.image" />
+                                            <img src="assets/user.png" class="avatar-default" *ngIf="!identity.image" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="avatar-fullname pull-left">
+                                        {{ identity.name + ' ' + identity.surname }}
+                                    </div>
+                                    <div class="">
+                                        <label>What are you thinking? </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 py-1">
+                        <textarea name="text"  class="form-control" [(ngModel)]="publication.text" required></textarea>
+                    </div>
+                </div>
+
+                <div class="row py-1">
+                    <div class="col-md-6">
+                        <input type="file" placeholder="upload your photo" (change)="fileChangeEvent($event)" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="submit" value="Publish" class="btn btn-primary btn float-end" [disabled]="!postForm.form.valid" />
+                    </div>
+                </div>
+            </form>
+        </div>
+            <div class="alert alert-success" *ngIf="status == 'success'">
+                Publish sucessfully!
+            </div>
+            <div class="alert alert-danger" *ngIf="status == 'error'">
+                Oops we have problems!
+            </div>
+        </div>
+    </div>
+</div>
+
