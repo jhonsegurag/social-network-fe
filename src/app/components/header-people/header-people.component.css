@@ -1,0 +1,33 @@
+
+.header-people-container{
+
+
+    .profile-user-container {
+        .avatar-profile{
+            margin: auto;
+            height: 100px;
+            width: 100px;
+            
+        }
+    
+        .avatar-profile img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    
+    
+    .information-user-container{
+    
+        .title {
+            color: #B5B5B5;
+        }
+    
+        .description {
+            color: #505050;
+        }
+    
+    }
+    
+}

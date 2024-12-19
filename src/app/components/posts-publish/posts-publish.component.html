@@ -1,0 +1,33 @@
+<div class="container-fluid posts-publish-container p-5">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm, $event)">
+                <div class="row py-1">
+                    <div class="col-md-12">
+                        <label>What are you thinking? </label>
+                    </div>
+                    <div class="col-md-12 py-1">
+                        <textarea name="text"  class="form-control" [(ngModel)]="publication.text" required></textarea>
+                    </div>
+                </div>
+
+                <div class="row py-1">
+                    <div class="col-md-6">
+                        <input type="file" placeholder="upload your photo" (change)="fileChangeEvent($event)" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="submit" value="Publish" class="btn btn-primary btn float-end" [disabled]="!postForm.form.valid" />
+                    </div>
+                </div>
+            </form>
+            <div class="alert alert-success" *ngIf="status == 'success'">
+                Publish sucessfully!
+            </div>
+            <div class="alert alert-danger" *ngIf="status == 'error'">
+                Oops we have problems!
+            </div>
+        </div>
+    </div>
+</div>
+
