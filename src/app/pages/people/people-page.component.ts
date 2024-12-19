@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './people-page.component.css'
 })
 export class PeoplePageComponent {
+  constructor() {}
 
+  ngOnInit() {
+    console.log('[OK] Component: people-page');
+  }
 }

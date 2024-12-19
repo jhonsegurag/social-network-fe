@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   nameSocialNetwork: 'Social Network',
-  apiUrl: 'http://localhost:3800/api/',
+  apiUrl: 'http://localhost:3000/api/',
 };
 
 /*
