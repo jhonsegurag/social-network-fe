@@ -1,0 +1,19 @@
+.sticky-top{
+    top: 180px;
+
+
+    .nav-pills {
+
+        .nav-link {
+            color:#593EFF;
+            border-radius: 0px;
+        }
+
+        .nav-link.active{
+            color:#FFFFFF;
+            background-color:#593EFF;
+        }
+
+    }
+
+}
