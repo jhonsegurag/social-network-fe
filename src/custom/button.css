@@ -9,3 +9,8 @@
 .btn-primary.disabled, .btn-primary:disabled {
     background-color: #432FC3;
 }
+
+.btn-outline-primary {
+    border: 1px solid #593EFF;
+    background-color: transparent;
+}

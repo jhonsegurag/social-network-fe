@@ -1,5 +1,5 @@
 .posts-publish-container{
-    background-color: #F5F5F5;
+    background-color: #FFFFFF;
 }
 
 .post-publish {
@@ -7,6 +7,7 @@
     border-radius: 8px;
     box-shadow: -2px 1px 6px rgba(0, 0, 0, 0.2);
     padding: 15px;
+    margin-top: 15px;
 
     .post-publish-header{
         

@@ -2,16 +2,9 @@
 .header-timeline-container{
 
     .profile-user-container {
-
-        .header-profile{
-            height: 75px;
-            background-color: #593EFF;
-        }
-
-        .avatar-float {
-            position: relative;
-            top: -40px;
-        }
+        border-top:  25px solid#593EFF;
+        border-radius: 8px;
+        box-shadow: -2px 1px 6px rgba(0, 0, 0, 0.2);
 
         .avatar-profile{
             margin: auto;
@@ -25,14 +18,23 @@
             height: 100%;
             border-radius: 50%;
         }
+
+        .fullname {
+            color: #999999;
+        }
+
+
     }
     
     
     .information-user-container{
+
+
     
         .title {
             color: #B5B5B5;
         }
+        
     
         .description {
             color: #505050;
@@ -40,4 +42,4 @@
     
     }
     
-    }
+}

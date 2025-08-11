@@ -1,4 +1,4 @@
-<div class="container-fluid posts-timeline-container p-5">
+<div class="container-fluid posts-timeline-container px-5 py-1">
     <div class="row">
         <div class="offset-md-1 col-md-10">
             <div id="publications">
@@ -55,7 +55,7 @@
                             </div>
                             
                             <div class="post-timeline-content">
-                                <div class="offset-md-2 col-md-8" *ngIf="publication?.file != 'null'">
+                                <div class="col-md-12" *ngIf="publication?.file != 'null'">
                                     <img class="img-fluid" src="{{ url + 'get-image-pub/' + publication?.file }}"/>
                                 </div>
                             </div>

@@ -1,6 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+import { HomePageComponent } from './pages/home/home-page.component';
 import { LoginPageComponent } from './pages/login/login-page.component';
 import { RegisterPageComponent } from './pages/register/register-page.component';
 import { TimelinePageComponent } from './pages/timeline/timeline-page.component';
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
 
     {path: 'login', component: LoginPageComponent},
     {path: 'register', component: RegisterPageComponent},
-    {path: '', component: LoginPageComponent},
+    {path: '', component: HomePageComponent},
 ];
 
 export const appRoutingProviders: any[] = [];
