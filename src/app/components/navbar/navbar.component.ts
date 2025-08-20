@@ -3,7 +3,7 @@ import { UserService } from 'src/app/services/user.service';
 import {GLOBAL} from '../../services/global';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
   providers: [UserService]

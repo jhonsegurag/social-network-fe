@@ -1,54 +1,83 @@
-<div class="navigation col-lg-12">
-  <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <div class="navbar-header" *ngIf="!identity">
-              <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="navbar-brand">{{title}}</a>
-          </div>
+<div class="container-fluid navbar-container">
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-purple" href="#">Worklic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-header" *ngIf="identity">
+                    <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="navbar-brand">{{title}}</a>
+                </div>
+      
+                <div class="collapse navbar-collapse profile" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="!identity">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Como funciona</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Soy profesional</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Soy empresa</a>
+                          </li>
+                    </ul>
+                    <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="identity">
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-home"></span> Inicio</a>
+                        </li>
 
-          <ul class="nav navbar-nav" *ngIf="identity">
-              <li>
-                  <a [routerLink]="['/home']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-home"></span> Inicio</a>
-              </li>
-              <li>
-                  <a [routerLink]="['/timeline']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-th-list"></span> Timeline</a>
-              </li>
-              <li>
-                  <a [routerLink]="['/gente']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Gente</a>
-              </li>
-              <li>
-                  <a [routerLink]="['/mensajes']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a>
-              </li>
-          </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/timeline']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-th-list"></span> Timeline</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/profile']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-th-list"></span> Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/people']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Conexiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/jobs']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Empleos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/mensajes']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-envelope"></span> Mensajes</a>
+                        </li>
 
-          <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
-              <li>
-                  <a [routerLink]="['/login']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-              </li>
-              <li>
-                  <a [routerLink]="['/register']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Registrar</a>
-              </li>
-          </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']" >Iniciar sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary btn-sm" [routerLink]="['/register']" [routerLinkActive]="['active']">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">EN</a>
+                        </li>
 
-          <ul class="nav navbar-nav navbar-right" *ngIf="identity">
-              <li class="avatar">
-                  <img src="{{ url + 'get-image-user/' + identity.image }}" *ngIf="identity && identity.image" />
-              </li>
-              <li class="dropdown">
-                  <a  class="dropdown-toggle" data-toggle="dropdown" href="#">{{identity.name}} <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                      <li>
-                          <a [routerLink]="['/perfil', identity._id]" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Mi perfil</a>
-                      </li>
-                      <li>
-                          <a [routerLink]="['/mis-datos']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-cog"></span> Mis datos</a>
-                      </li>
-                      <li>
-                          <a class="pointer" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesion</a>
-                      </li>
-                  </ul>
-              </li>
-          </ul>
-          
-      </div>
-  </nav>
+                        <li class="">
+                            <div class="avatar-profile">
+                                <img src="{{ url + 'get-image-user/' + identity.image }}" *ngIf="identity && identity.image" class="img-fluid" />
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a  class="dropdown-toggle" data-toggle="dropdown" href="#" id="dropdown-profile" data-bs-toggle="dropdown" aria-expanded="false">{{identity.name}} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown-profile">
+                                <li>
+                                    <a class="dropdown-item" [routerLink]="['/perfil', identity._id]" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-user"></span> Mi perfil</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" [routerLink]="['/mis-datos']" [routerLinkActive]="['active']"><span class="glyphicon glyphicon-cog"></span> Mis datos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item pointer" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Cerrar sesion</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+        
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+  
 </div>

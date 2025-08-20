@@ -1,11 +1,12 @@
 
 .header-timeline-container{
+    
+    .decorator-profile{
+        border-top:  25px solid#593EFF;
+    }
 
     .profile-user-container {
-        border-top:  25px solid#593EFF;
-        border-radius: 8px;
-        box-shadow: -2px 1px 6px rgba(0, 0, 0, 0.2);
-
+        
         .avatar-profile{
             margin: auto;
             height: 100px;

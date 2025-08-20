@@ -32,6 +32,7 @@ const appRoutes: Routes = [
     {path: 'siguiendo/:id/:page', component: FollowingComponent, canActivate:[UserGuard]},
     {path: 'seguidores/:id/:page', component: FollowedComponent, canActivate:[UserGuard]},
 
+    {path: 'home', component: HomePageComponent},
     {path: 'login', component: LoginPageComponent},
     {path: 'register', component: RegisterPageComponent},
     {path: '', component: HomePageComponent},

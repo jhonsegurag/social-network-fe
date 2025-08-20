@@ -1,46 +1,46 @@
 <div class="container-fluid header-timeline-container px-5 py-1">
     <div class="row">
         <div class="offset-md-1 col-md-10">
-            <div class="profile-user-container">
-                <div class="row">
-                    <div class="offset-md-3 col-md-6">
-                        <div class="row py-1">
-                            <div class="col-md-12">
-                                <div class="avatar-profile">
-                                    <img src="{{url + 'get-image-user/' + identity.image}}" alt="" *ngIf="identity.image">
-                                    <img src="assets/user.png" *ngIf="!identity.image"/>
+                <div class="profile-user-container bg-white border rounded-3 shadow-sm decorator-profile py-3">
+                    
+                            <div class="offset-md-3 col-md-6">
+                                <div class="row py-1">
+                                    <div class="col-md-12">
+                                        <div class="avatar-profile">
+                                            <img src="{{url + 'get-image-user/' + identity.image}}" alt="" *ngIf="identity.image">
+                                            <img src="assets/user.png" *ngIf="!identity.image"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-1">
+                                    <div class="col-md-12">
+                                        <h5 class="text-center fullname"> {{ identity.name + ' ' + identity.surname }}</h5>
+                                    </div>
+                                </div>
+                                <div class="row py-1">
+                                    <div class="col-md-12">
+                                        <h6 class="text-center"> {{ identity.nick }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row py-1">
+                                    <div class="col-md-4">
+                                        <h6 class="text-center"> {{stats.following}} Followers </h6>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="text-center"> {{stats.followed}} Following </h6>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="text-center"> {{stats.publications}} Posts </h6>
+                                    </div>
+                                </div>
+                                <div class="row py-1">
+                                    <div class="col-md-12">
+                                        <p class="text-center description"> I'm nickname, I'm passionate to travel to world </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row py-1">
-                            <div class="col-md-12">
-                                <h5 class="text-center fullname"> {{ identity.name + ' ' + identity.surname }}</h5>
-                            </div>
-                        </div>
-                        <div class="row py-1">
-                            <div class="col-md-12">
-                                <h6 class="text-center"> {{ identity.nick }}</h6>
-                            </div>
-                        </div>
-                        <div class="row py-1">
-                            <div class="col-md-4">
-                                <h6 class="text-center"> {{stats.following}} Followers </h6>
-                            </div>
-                            <div class="col-md-4">
-                                <h6 class="text-center"> {{stats.followed}} Following </h6>
-                            </div>
-                            <div class="col-md-4">
-                                <h6 class="text-center"> {{stats.publications}} Posts </h6>
-                            </div>
-                        </div>
-                        <div class="row py-1">
-                            <div class="col-md-12">
-                                <p class="text-center description"> I'm nickname, I'm passionate to travel to world </p>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
-            </div>
         </div>
     </div>
 
@@ -76,4 +76,4 @@
         </div> -->
 
         
-    </div>
+</div>

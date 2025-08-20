@@ -1,3 +1,14 @@
 .testimonials-container{
+
+    .testimonials{
+        .testimonial{
+
+            .avatar-profile{
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
     
 }

@@ -41,6 +41,7 @@ import { PostsPublishComponent } from './components/posts-publish/posts-publish.
 import { PostsProfileComponent } from './components/posts-profile/posts-profile.component';
 import { PostsPeopleComponent } from './components/posts-people/posts-people.component';
 import { PublicationsComponent } from './components/publications/publications.component';
+import { RegisterComponent } from './components/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FollowingComponent } from './components/following/following.component';
 import { FollowedComponent } from './components/followed/followed.component';
@@ -84,6 +85,7 @@ import {UserGuard} from './services/user.guard';
     PostsPeopleComponent,
     PublicationsComponent,
     ProfileUpdatePageComponent,
+    RegisterComponent,
     SearcherComponent,
     SidebarComponent,
     StepperProfileComponent,
