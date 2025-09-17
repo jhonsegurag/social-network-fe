@@ -21,6 +21,7 @@ import {UserGuard} from './services/user.guard';
 const appRoutes: Routes = [
     {path: 'timeline', component: TimelinePageComponent, canActivate:[UserGuard]},
     {path: 'profile', component: ProfilePageComponent, canActivate:[UserGuard]},
+    {path: 'profile/:id', component: ProfilePageComponent, canActivate:[UserGuard]},
     {path: 'profile-update', component: ProfileUpdatePageComponent, canActivate:[UserGuard]},
     {path: 'people', component: PeoplePageComponent, canActivate:[UserGuard]},
     {path: 'chat', component: ChatPageComponent, canActivate:[UserGuard]},
